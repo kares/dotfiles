@@ -1,0 +1,19 @@
+
+if [ -d /opt/bin ]; then
+  PATH="$PATH:/opt/bin"
+fi
+
+if [ -d ~/bin ]; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+# IRB to pick up the .irbc customization :
+export IRBRC="$HOME/.irbrc"
+
+#PATH="${PATH}:/var/lib/gems/1.8/bin"
+
+# RVM :
+if [ -d ~/.gem/ruby/1.8/bin ]; then
+  PATH="$PATH:~/.gem/ruby/1.8/bin"
+fi
+
