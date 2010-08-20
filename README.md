@@ -9,7 +9,9 @@ Installation
 ------------
 
   `git clone git://github.com/kares/dotfiles ~/.dotfiles`
+  
   `cd ~/.dotfiles`
+  
   `rake install`
 
 
@@ -38,6 +40,7 @@ home path.
 Tab completion is also added to rake and cap commands:
 
   `rake db:mi<tab>`
+  
   `cap de<tab>`
 
 To speed things up, the results are cached in local `.rake_tasks~` and 
@@ -48,8 +51,11 @@ If you're using Rails, you'll find some handy aliases (below). You can also
 use `show_log` and `hide_log` in `script/console` to show the log inline.
   
   `ss       # script/server`
+  
   `sc       # script/console`
+  
   `sg       # script/generate`
+  
   `tlog     # tail -f log/development.log`
 
 See and customize the aliases in `~/.bash/aliases`
