@@ -7,8 +7,26 @@ rescue LoadError
 end
 
 def change_log(stream)
-  ActiveRecord::Base.logger = Logger.new(stream)
-  ActiveRecord::Base.clear_active_connections!
+  require 'logger'
+  logger = Logger.new(stream)
+  if Rails.respond_to?(:logger=)
+    Rails.logger = logger
+  else
+    silence_warnings do
+      Object.const_set :RAILS_DEFAULT_LOGGER, logger
+    end
+  end
+  if defined? ActiveRecord::Base
+    ActiveRecord::Base.logger = logger
+    ActiveRecord::Base.clear_active_connections!
+  end
+  if defined? ActionController::Base
+    ActionController::Base.logger = logger
+  end
+  if defined? ActiveResource::Base
+    ActiveResource::Base.logger = logger
+  end
+  logger
 end
 
 def show_log

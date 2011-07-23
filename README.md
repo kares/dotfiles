@@ -1,7 +1,8 @@
 Dot Files (Ubuntu version)
 ==========================
 
-Based on Ryan Bates's dotfiles http://github.com/ryanb/dotfiles !
+Based on Ryan Bates's dotfiles <http://github.com/ryanb/dotfiles> !
+
 Tested on Ubuntu 10.04 but should work on any debian based system.
 
 
