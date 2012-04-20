@@ -5,10 +5,7 @@ source ~/.bash/paths
 source ~/.bash/config
 
 source ~/.bash/cdargs
-
-#if [ -s $HOME/.rvm/scripts/rvm ]; then
-#    source $HOME/.rvm/scripts/rvm
-#fi # and @see .bash/paths
+source ~/.bash/copy
 
 if [ -s "$HOME/.rvmrc" ]; then
     source "$HOME/.rvmrc"
