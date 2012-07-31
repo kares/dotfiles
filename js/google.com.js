@@ -1,7 +1,8 @@
 (function($) {
 //
+$('#gbzw').hide(); // top bar including g+ crap
+$('#gbvg').hide(); // top side g+ personal crap
 $('#pmocntr,#pmocntr2').hide().empty(); // chrome promo
-$('#mngb').hide(); // top bar including g+ crap
-$('#footer').hide(); // advertising program
+$('#fll').css('visibility', 'hidden'); // advertising program
 //
 })(jQuery);
