@@ -1,25 +1,14 @@
 
-complete -C ~/.bash/completion_scripts/rake_completion -o default rake
-complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
-complete -C ~/.bash/completion_scripts/home_completion -o default h
-complete -C ~/.bash/completion_scripts/project_completion -o default c
+#complete -C ~/.bash/completion_scripts/rake_completion -o default rake
+#complete -C ~/.bash/completion_scripts/capistrano_completion -o default cap
+#complete -C ~/.bash/completion_scripts/home_completion -o default h
+#complete -C ~/.bash/completion_scripts/project_completion -o default c
 
-_gemopencomplete() {
-    local cmd=${COMP_WORDS[0]}
-    local subcmd=${COMP_WORDS[1]}
-    local cur=${COMP_WORDS[COMP_CWORD]}
-
-    case "$subcmd" in
-        open)
-            words=`ruby -rubygems -e 'puts Dir["{#{Gem::Specification.dirs.join(",")}}/*.gemspec"].collect {|s| File.basename(s).gsub(/\.gemspec$/, "")}'`
-            ;;
-        *)
-            return
-            ;;
-    esac
-
-    COMPREPLY=($(compgen -W "$words" -- $cur))
-    return 0
-}
-
-complete -o default -F _gemopencomplete gem
+FILES=~/.bash/completion_scripts/*.sh
+for config_file in $FILES
+do
+  #echo "loading ${config_file}"
+  if [ -e "${config_file}" ]; then
+    source $config_file
+  fi
+done
