@@ -1,7 +1,12 @@
 *~
 .tmp
 .rvmrc
+.ruby-version
+.ruby-gemset
 .redcar
 .netbeans
 nbproject
+nbbuild.xml
+nb-configuration.xml
+catalog.xml
 ._*
