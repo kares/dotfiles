@@ -1,34 +1,36 @@
 # cd
 alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+# changing directory to home
+function h { cd ~/$1; }
+# changing directory to workspace
+function w { cd ~/workspace/$1; }
 
 # ls
-alias ls="ls -F"
-alias l="ls -lAh"
-alias ll="ls -l"
-alias la='ls -A'
+alias ls='ls -F --color'
+alias ll='ls -l --color'
+alias la='ls -A --color'
+alias lsd='ls -l --color | grep "^d"'
 
 # git
-#alias gl='git pull'
-#alias gp='git push'
-#alias gd='git diff'
-#alias gc='git commit'
-#alias gca='git commit -a'
-#alias gco='git checkout'
-#alias gb='git branch'
-#alias gs='git status'
+alias gif='git fetch'
+alias gip='git push'
+alias gid='git diff'
+alias gic='git commit'
+#alias gib='git branch'
+alias gis='git status'
 #alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 
 # commands starting with % for pasting from web
 alias %=' '
 
-# changing directory to home
-function h { cd ~/$1; }
-# changing directory to code project
-function w { cd ~/workspace/$1; }
-
-# misc
-alias reload='. ~/.bash_profile'
-
 # copy & paste
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+# editor
+alias open='$EDITOR'
+
+# misc
+alias reload='. ~/.bash_profile'
