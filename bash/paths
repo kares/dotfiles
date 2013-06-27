@@ -17,3 +17,8 @@ if [ -d ~/.gem/ruby/1.8/bin ]; then
   PATH="$PATH:~/.gem/ruby/1.8/bin"
 fi
 
+# jEnv :
+if [ -d ~/.jenv/bin ]; then
+  PATH="$PATH:$HOME/.jenv/bin"
+fi
+
