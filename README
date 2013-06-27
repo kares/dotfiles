@@ -1,0 +1,19 @@
+............
+============
+
+== install :
+
+git clone git://github.com/kares/dotfiles ~/.dotfiles
+cd ~/.dotfiles
+# rake install
+
+== warning :
+
+Ubuntu includes and executes `~/.bashrc` 
+but not `~/.bash_profile` that is why during install 
+it will append `~/.bash_profile` as a source ...
+
+------------
+://kares.org
+
+
